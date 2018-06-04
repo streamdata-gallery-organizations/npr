@@ -8,8 +8,8 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jp
 x-kinRank: "9"
 x-alexaRank: "641"
 tags: NPR
-created: "2018-05-22"
-modified: "2018-05-22"
+created: "2018-06-03"
+modified: "2018-06-03"
 url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/apis.md
 specificationVersion: "0.14"
 apis:
@@ -38,9 +38,9 @@ apis:
 
     Finally, please do not confuse an authorization code with an access token. Once your app has completed this flow, you will still need to call `POST /authorization/v2/token` in order to swap the code for a valid access token.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////authorization/v2/authorize
-  tags: Authorization, Authorize
+  tags: News,Authorization, Authorize
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/authorizationv2authorize-get-postman.md
@@ -53,9 +53,9 @@ apis:
 
     Third-party clients will need to use one or the other of these two endpoints, but they will generally not use both.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////authorization/v2/device
-  tags: Authorization, Device
+  tags: News,Authorization, Device
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/authorizationv2device-post-postman.md
@@ -84,9 +84,9 @@ apis:
 
     Note that at this time, refresh tokens are an opt-in feature; however, in the future, they will gradually transition to being opt-out, and ultimately required for all clients. Our general guidance at this time is that if this endpoint starts returning refresh tokens for you, you are responsible for implementing the code to handle them appropriately in accordance with the OAuth 2.0 spec. For more information about our gradual rollout of this feature, please contact the NPR One API team.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////authorization/v2/token
-  tags: Authorization, Token
+  tags: News,Authorization, Token
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/authorizationv2token-post-postman.md
@@ -108,9 +108,9 @@ apis:
 
     Note that revoking an access token will automatically revoke any refresh tokens associated with it, and vice-versa.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////authorization/v2/token/revoke
-  tags: Authorization, Token, Revoke
+  tags: News,Authorization, Token, Revoke
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/authorizationv2tokenrevoke-post-postman.md
@@ -121,9 +121,9 @@ apis:
   description: After a successful call, this returns a User document with an updated
     list of affiliations.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////identity/v2/following
-  tags: Entity, Following
+  tags: News,Entity, Following
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/identityv2following-post-openapi.md
@@ -133,9 +133,9 @@ apis:
     stations will not be deleted, but the new station will be moved to first in the
     array.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////identity/v2/stations
-  tags: Entity, Stations
+  tags: News,Entity, Stations
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/identityv2stations-put-openapi.md
@@ -144,9 +144,9 @@ apis:
   description: After a successful login, the client should send a `GET` call approximately
     once an hour to refresh the user data.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////identity/v2/user
-  tags: Entity, User
+  tags: News,Entity, User
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/identityv2user-get-openapi.md
@@ -157,9 +157,9 @@ apis:
     This can and should only be used by clients who have access to the `temporary_user` grant type.
         Third-party developers do not have access to this grant type by default, and will not need this endpoint.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////identity/v2/user/inherit
-  tags: Entity, User, Inherit
+  tags: News,Entity, User, Inherit
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/identityv2userinherit-post-openapi.md
@@ -168,9 +168,9 @@ apis:
   description: This endpoint provides a list of recent audio items associated with
     the aggregation along with metadata about the aggregation.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////listening/v2/aggregation/{aggId}/recommendations
-  tags: Listening, Aggregation, Agg, Recommendations
+  tags: News,Listening, Aggregation, Agg, Recommendations
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2aggregationaggidrecommendations-get-postman.md
@@ -181,9 +181,9 @@ apis:
   description: These channels allow the user to specify a focus for the content returned
     in the recommendations endpoint.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////listening/v2/channels
-  tags: Listening, Channels
+  tags: News,Listening, Channels
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2channels-get-postman.md
@@ -195,9 +195,9 @@ apis:
     that the logged-in user has consumed. Some rated recommendations are filtered,
     such as sponsorship and donation.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////listening/v2/history
-  tags: Listening, History
+  tags: News,Listening, History
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2history-get-openapi.md
@@ -206,9 +206,9 @@ apis:
   description: This endpoint provides a list of recommendations from a category of
     content from  an organization.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////listening/v2/organizations/{orgId}/categories/{category}/recommendations
-  tags: Listening, Organizations, Org, Categories, Category, Recommendations
+  tags: News,Listening, Organizations, Org, Categories, Category, Recommendations
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2organizationsorgidcategoriescategoryrecommendations-get-postman.md
@@ -220,9 +220,9 @@ apis:
   description: This endpoint provides a variety of details about an organization including
     various lists of recent audio items.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////listening/v2/organizations/{orgId}/recommendations
-  tags: Listening, Organizations, Org, Recommendations
+  tags: News,Listening, Organizations, Org, Recommendations
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2organizationsorgidrecommendations-get-postman.md
@@ -233,9 +233,9 @@ apis:
   description: Gets the most recently played promo for which the user has neither
     tapped through the promo or listened to the target story.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////listening/v2/promo/recommendations
-  tags: Listening, Promo, Recommendations
+  tags: News,Listening, Promo, Recommendations
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2promorecommendations-get-postman.md
@@ -252,9 +252,9 @@ apis:
 
     This endpoint can return a blank JSON.doc or AudioItemDocument depending on the `recommend=true|false` parameter. The `recommend=true` flag allows this endpoint to both receive ratings and send back recommendations in the same call.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////listening/v2/ratings
-  tags: Listening, Ratings
+  tags: News,Listening, Ratings
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2ratings-post-openapi.md
@@ -266,9 +266,9 @@ apis:
     A fully-populated link to the ratings endpoint is returned with each individual recommendation and is located in the AudioItemDocument under the `links['recommendations']` object. The query parameters in this link should not be modified.
     Be sure to copy and send back the entire ratings object (RatingData), as new fields may be added to it in the future.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////listening/v2/recommendations
-  tags: Listening, Recommendations
+  tags: News,Listening, Recommendations
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2recommendations-get-postman.md
@@ -281,9 +281,9 @@ apis:
     of returned object; the object returned by a search will be either an AggregationAudioItemListDocument
     or an AudioItemDocument.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////listening/v2/search/recommendations
-  tags: Listening, Search, Recommendations
+  tags: News,Listening, Search, Recommendations
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2searchrecommendations-get-postman.md
@@ -293,9 +293,9 @@ apis:
   x-api-slug: npr
   description: This will send a station-specific donation email to the logged-in user.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////localactivation/v2/donate_email
-  tags: Localactivation, Donate, Email
+  tags: News,Localactivation, Donate, Email
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/localactivationv2donate-email-get-openapi.md
@@ -308,9 +308,9 @@ apis:
 
     For development purposes, it's worth noting that there is currently no way to clear a user's cache without submitting some form of tracking.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////sponsorship/v2/ads
-  tags: Sponsorship, Advertising
+  tags: News,Sponsorship, Advertising
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/sponsorshipv2ads-get-postman.md
@@ -323,9 +323,9 @@ apis:
 
     The tracking information should be submitted in the body of the request in the form of a JSON object following the Collection.Doc+JSON specification.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////sponsorship/v2/ads
-  tags: Sponsorship, Advertising
+  tags: News,Sponsorship, Advertising
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/sponsorshipv2ads-post-openapi.md
@@ -345,9 +345,9 @@ apis:
 
     If clients want to be able to offer multiple types of searches (e.g. 'Search for a station name, city or zipcode') using a *single* search input form, `q` should be used. But again, be aware that using `city` and `state` together will yield more accurate search results than `q={cityName}`.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////stationfinder/v3/stations
-  tags: Stationfinder, V3, Stations
+  tags: News,Stationfinder, Stations
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/stationfinderv3stations-get-postman.md
@@ -360,9 +360,9 @@ apis:
 
     A typical use case for this data is for clients who want to create a dropdown menu, modal/pop-up or dedicated page displaying more information about the station the client is localized to, including, for example, links to the station's homepage and donation (pledge) page.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org////stationfinder/v3/stations/{stationId}
-  tags: Stationfinder, V3, Stations, Station
+  tags: News,Stationfinder, Stations, Station
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/stationfinderv3stationsstationid-get-postman.md
@@ -374,7 +374,7 @@ apis:
     business, politics, health, science, technology, music, arts and culture. Subscribe
     to podcasts and RSS feeds.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://www.npr.org
+  humanURL: http://npr.org
   baseURL: https://api.npr.org//
   tags: NPR
   properties:
@@ -425,6 +425,8 @@ x-common:
   url: https://twitter.com/NPR
 - type: x-twitter
   url: https://twitter.com/NPRTechTeam
+- type: x-website
+  url: http://npr.org
 - type: x-website
   url: http://www.npr.org
 include: []

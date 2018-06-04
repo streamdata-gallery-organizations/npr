@@ -4,7 +4,7 @@ x-collection-name: NPR
 x-complete: 1
 info:
   title: NPR One API Reference
-  description: npr-one-is-a-smart-application-that-brings-the-best-of-npr-and-member-station-programming-newscasts-podcasts-and-stories-together-to-create-a-new-experience-for-listening-it-provides-an-editorcurated-and-localized-mobile-listening-experience-based-on-the-content-the-listener-chooses-likes-shares-and-enjoys-the-api-provides-all-of-the-content-and-customization-in-a-simple-structured-way-that-is-easy-for-applicationdevelopers-to-implement
+  description: npr-one-is-a-smart-application-that-brings-the-best-of-npr-and-member-station-programming-newscasts-podcasts-and-stories-together-to-create-a-new-experience-for-listening--it-provides-an-editorcurated-and-localized-mobile-listening-experience-based-on-the-content-the-listener-chooses-likes-shares-and-enjoys--the-api-provides-all-of-the-content-and-customization-in-a-simple-structured-way-that-is-easy-for-applicationdevelopers-to-implement-
   termsOfService: http://dev.npr.org/develop/terms-of-use
   contact:
     name: NPR One Enterprise Team
@@ -68,6 +68,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Authorize
   /authorization/v2/device:
@@ -93,6 +94,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Device
   /authorization/v2/token:
@@ -160,6 +162,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Token
   /authorization/v2/token/revoke:
@@ -196,6 +199,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Token
       - Revoke
@@ -221,6 +225,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Entity
       - Following
   /identity/v2/stations:
@@ -243,6 +248,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Entity
       - Stations
   /identity/v2/user:
@@ -259,6 +265,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Entity
       - User
   /identity/v2/user/inherit:
@@ -280,6 +287,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Entity
       - User
       - Inherit
@@ -303,6 +311,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Aggregation
       - Agg
@@ -325,6 +334,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Channels
   /listening/v2/history:
@@ -342,6 +352,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - History
   /listening/v2/organizations/{orgId}/categories/{category}/recommendations:
@@ -365,6 +376,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Organizations
       - Org
@@ -389,6 +401,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Organizations
       - Org
@@ -407,6 +420,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Promo
       - Recommendations
@@ -440,6 +454,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Ratings
   /listening/v2/recommendations:
@@ -468,6 +483,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Recommendations
   /listening/v2/search/recommendations:
@@ -489,6 +505,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Search
       - Recommendations
@@ -506,6 +523,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Localactivation
       - Donate
       - Email
@@ -535,6 +553,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Sponsorship
       - Advertising
     post:
@@ -558,6 +577,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Sponsorship
       - Advertising
   /stationfinder/v3/stations:
@@ -605,8 +625,8 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Stationfinder
-      - V3
       - Stations
   /stationfinder/v3/stations/{stationId}:
     get:
@@ -627,8 +647,8 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Stationfinder
-      - V3
       - Stations
       - Station
 ---

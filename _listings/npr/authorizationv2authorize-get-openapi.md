@@ -89,6 +89,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Authorize
 x-streamrank:

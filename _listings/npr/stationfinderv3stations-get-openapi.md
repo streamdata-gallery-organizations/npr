@@ -80,6 +80,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Authorize
   /authorization/v2/device:
@@ -105,6 +106,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Device
   /authorization/v2/token:
@@ -172,6 +174,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Token
   /authorization/v2/token/revoke:
@@ -208,6 +211,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Token
       - Revoke
@@ -233,6 +237,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Entity
       - Following
   /identity/v2/stations:
@@ -255,6 +260,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Entity
       - Stations
   /identity/v2/user:
@@ -271,6 +277,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Entity
       - User
   /identity/v2/user/inherit:
@@ -292,6 +299,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Entity
       - User
       - Inherit
@@ -315,6 +323,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Aggregation
       - Agg
@@ -337,6 +346,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Channels
   /listening/v2/history:
@@ -354,6 +364,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - History
   /listening/v2/organizations/{orgId}/categories/{category}/recommendations:
@@ -377,6 +388,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Organizations
       - Org
@@ -401,6 +413,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Organizations
       - Org
@@ -419,6 +432,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Promo
       - Recommendations
@@ -452,6 +466,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Ratings
   /listening/v2/recommendations:
@@ -480,6 +495,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Recommendations
   /listening/v2/search/recommendations:
@@ -501,6 +517,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Listening
       - Search
       - Recommendations
@@ -518,6 +535,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Localactivation
       - Donate
       - Email
@@ -547,6 +565,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Sponsorship
       - Advertising
     post:
@@ -570,6 +589,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Sponsorship
       - Advertising
   /stationfinder/v3/stations:
@@ -617,20 +637,20 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Stationfinder
-      - V3
       - Stations
 x-streamrank:
-  polling_total_time_average: 0
-  polling_size_download_average: 0
-  streaming_total_time_average: 0
-  streaming_size_download_average: 0
-  change_yes: 0
-  change_no: 0
-  time_percentage: 0
-  size_percentage: 0
-  change_percentage: 0
-  last_run: ""
-  days_run: 0
-  minute_run: 0
+  polling_total_time_average: "0"
+  polling_size_download_average: "0"
+  streaming_total_time_average: "0"
+  streaming_size_download_average: "0"
+  change_yes: "0"
+  change_no: "0"
+  time_percentage: "0"
+  size_percentage: "0"
+  change_percentage: "200"
+  last_run: ~
+  days_run: "0"
+  minute_run: "0"
 ---

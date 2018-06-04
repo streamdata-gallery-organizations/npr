@@ -87,6 +87,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Authorize
   /authorization/v2/device:
@@ -112,6 +113,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Device
   /authorization/v2/token:
@@ -179,6 +181,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Token
 x-streamrank:

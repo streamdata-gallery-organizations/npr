@@ -70,6 +70,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Authorize
   /authorization/v2/device:
@@ -95,6 +96,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Device
   /authorization/v2/token:
@@ -162,6 +164,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Token
   /authorization/v2/token/revoke:
@@ -198,6 +201,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Authorization
       - Token
       - Revoke
@@ -223,6 +227,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Entity
       - Following
   /identity/v2/stations:
@@ -245,6 +250,7 @@ paths:
         200:
           description: OK
       tags:
+      - News
       - Entity
       - Stations
 x-streamrank:
