@@ -6,10 +6,10 @@ description: NPR delivers breaking national and world news. Also top stories fro
   to podcasts and RSS feeds.
 image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
 x-kinRank: "9"
-x-alexaRank: "641"
+x-alexaRank: "598"
 tags: NPR
-created: "2018-06-20"
-modified: "2018-06-20"
+created: "2018-06-25"
+modified: "2018-06-25"
 url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/apis.md
 specificationVersion: "0.14"
 apis:
@@ -413,6 +413,8 @@ x-common:
   url: giving@npr.org
 - type: x-email
   url: giftplanning@npr.org
+- type: x-email
+  url: NPRDonorCommunications@npr.org
 - type: x-getting-started
   url: http://dev.npr.org/#quick-start
 - type: x-github
