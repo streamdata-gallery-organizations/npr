@@ -8,13 +8,13 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jp
 x-kinRank: "9"
 x-alexaRank: "598"
 tags: NPR
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-30"
+modified: "2018-08-30"
 url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/apis.md
 specificationVersion: "0.14"
 apis:
-- name: NPR Show a web-based login/signup form to a user
-  x-api-slug: npr
+- name: NPR One API Reference - Show a web-based login/signup form to a user
+  x-api-slug: authorizationv2authorize-get
   description: |-
     If the parameters passed to this endpoint are correct, it will redirect to `npr.org/oauth2/login` for the user to complete the sign-in.
 
@@ -39,30 +39,34 @@ apis:
     Finally, please do not confuse an authorization code with an access token. Once your app has completed this flow, you will still need to call `POST /authorization/v2/token` in order to swap the code for a valid access token.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////authorization/v2/authorize
-  tags: News,Authorization, Authorize
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/authorizationv2authorize-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/authorizationv2authorize-get-openapi.md
-- name: NPR Initiate an OAuth2 login flow for limited input devices
-  x-api-slug: npr
+- name: NPR One API Reference - Initiate an OAuth2 login flow for limited input devices
+  x-api-slug: authorizationv2device-post
   description: |-
     This flow should only be used by clients who cannot show a native webview or do not have advanced input controls. It is an alternative to `GET /authorization/v2/authorize`.
 
     Third-party clients will need to use one or the other of these two endpoints, but they will generally not use both.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////authorization/v2/device
-  tags: News,Authorization, Device
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/authorizationv2device-post-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/authorizationv2device-post-openapi.md
-- name: NPR Create a new OAuth2 access token
-  x-api-slug: npr
+- name: NPR One API Reference - Create a new OAuth2 access token
+  x-api-slug: authorizationv2token-post
   description: |-
     Please be aware that the required parameters are contingent on the `grant_type` that you select.
 
@@ -85,15 +89,17 @@ apis:
     Note that at this time, refresh tokens are an opt-in feature; however, in the future, they will gradually transition to being opt-out, and ultimately required for all clients. Our general guidance at this time is that if this endpoint starts returning refresh tokens for you, you are responsible for implementing the code to handle them appropriately in accordance with the OAuth 2.0 spec. For more information about our gradual rollout of this feature, please contact the NPR One API team.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////authorization/v2/token
-  tags: News,Authorization, Token
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/authorizationv2token-post-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/authorizationv2token-post-openapi.md
-- name: NPR Revoke an existing OAuth2 access token
-  x-api-slug: npr
+- name: NPR One API Reference - Revoke an existing OAuth2 access token
+  x-api-slug: authorizationv2tokenrevoke-post
   description: |-
     Our implementation follows the proposed IETF specification [RFC-7009](https://tools.ietf.org/html/rfc7009).
 
@@ -109,141 +115,167 @@ apis:
     Note that revoking an access token will automatically revoke any refresh tokens associated with it, and vice-versa.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////authorization/v2/token/revoke
-  tags: News,Authorization, Token, Revoke
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/authorizationv2tokenrevoke-post-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/authorizationv2tokenrevoke-post-openapi.md
-- name: NPR Update the following status of the logged-in user for a particular aggregation
-  x-api-slug: npr
+- name: NPR One API Reference - Update the following status of the logged-in user
+    for a particular aggregation
+  x-api-slug: identityv2following-post
   description: After a successful call, this returns a User document with an updated
     list of affiliations.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////identity/v2/following
-  tags: News,Entity, Following
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/identityv2following-post-openapi.md
-- name: NPR Update the logged-in user's favorite station(s)
-  x-api-slug: npr
+- name: NPR One API Reference - Update the logged-in user's favorite station(s)
+  x-api-slug: identityv2stations-put
   description: Right now, only the primary station can be changed. Previously selected
     stations will not be deleted, but the new station will be moved to first in the
     array.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////identity/v2/stations
-  tags: News,Entity, Stations
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/identityv2stations-put-openapi.md
-- name: NPR Get the latest state information about the logged-in user
-  x-api-slug: npr
+- name: NPR One API Reference - Get the latest state information about the logged-in
+    user
+  x-api-slug: identityv2user-get
   description: After a successful login, the client should send a `GET` call approximately
     once an hour to refresh the user data.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////identity/v2/user
-  tags: News,Entity, User
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/identityv2user-get-openapi.md
-- name: NPR Copy listening data from a temporary user account to the logged-in user's
-    account
-  x-api-slug: npr
+- name: NPR One API Reference - Copy listening data from a temporary user account
+    to the logged-in user's account
+  x-api-slug: identityv2userinherit-post
   description: |-
     This can and should only be used by clients who have access to the `temporary_user` grant type.
         Third-party developers do not have access to this grant type by default, and will not need this endpoint.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////identity/v2/user/inherit
-  tags: News,Entity, User, Inherit
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/identityv2userinherit-post-openapi.md
-- name: NPR Get a set of recommendations for an aggregation
-  x-api-slug: npr
+- name: NPR One API Reference - Get a set of recommendations for an aggregation
+  x-api-slug: listeningv2aggregationaggidrecommendations-get
   description: This endpoint provides a list of recent audio items associated with
     the aggregation along with metadata about the aggregation.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////listening/v2/aggregation/{aggId}/recommendations
-  tags: News,Listening, Aggregation, Agg, Recommendations
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2aggregationaggidrecommendations-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2aggregationaggidrecommendations-get-openapi.md
-- name: NPR Get the list of available channels
-  x-api-slug: npr
+- name: NPR One API Reference - Get the list of available channels
+  x-api-slug: listeningv2channels-get
   description: These channels allow the user to specify a focus for the content returned
     in the recommendations endpoint.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////listening/v2/channels
-  tags: News,Listening, Channels
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2channels-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2channels-get-openapi.md
-- name: NPR Get recent ratings the logged-in user has submitted
-  x-api-slug: npr
+- name: NPR One API Reference - Get recent ratings the logged-in user has submitted
+  x-api-slug: listeningv2history-get
   description: This endpoint provides the list of recently-rated audio recommendations
     that the logged-in user has consumed. Some rated recommendations are filtered,
     such as sponsorship and donation.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////listening/v2/history
-  tags: News,Listening, History
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2history-get-openapi.md
-- name: NPR Get a list of recommendations from a category of content from an organization
-  x-api-slug: npr
+- name: NPR One API Reference - Get a list of recommendations from a category of content
+    from an organization
+  x-api-slug: listeningv2organizationsorgidcategoriescategoryrecommendations-get
   description: This endpoint provides a list of recommendations from a category of
     content from  an organization.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////listening/v2/organizations/{orgId}/categories/{category}/recommendations
-  tags: News,Listening, Organizations, Org, Categories, Category, Recommendations
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2organizationsorgidcategoriescategoryrecommendations-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2organizationsorgidcategoriescategoryrecommendations-get-openapi.md
-- name: NPR Get a variety of details about an organization including various lists
-    of recent audio items
-  x-api-slug: npr
+- name: NPR One API Reference - Get a variety of details about an organization including
+    various lists of recent audio items
+  x-api-slug: listeningv2organizationsorgidrecommendations-get
   description: This endpoint provides a variety of details about an organization including
     various lists of recent audio items.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////listening/v2/organizations/{orgId}/recommendations
-  tags: News,Listening, Organizations, Org, Recommendations
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2organizationsorgidrecommendations-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2organizationsorgidrecommendations-get-openapi.md
-- name: NPR Retrieve the most recent promo audio heard by the logged-in user
-  x-api-slug: npr
+- name: NPR One API Reference - Retrieve the most recent promo audio heard by the
+    logged-in user
+  x-api-slug: listeningv2promorecommendations-get
   description: Gets the most recently played promo for which the user has neither
     tapped through the promo or listened to the target story.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////listening/v2/promo/recommendations
-  tags: News,Listening, Promo, Recommendations
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2promorecommendations-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2promorecommendations-get-openapi.md
-- name: NPR Collect new ratings for media previously recommended to the logged-in
-    user
-  x-api-slug: npr
+- name: NPR One API Reference - Collect new ratings for media previously recommended
+    to the logged-in user
+  x-api-slug: listeningv2ratings-post
   description: |-
     This endpoint is the main mechanism for providing feedback from the user to NPR about the recommendations that are obtained from `GET /listening/v2/recommendations`.
 
@@ -253,13 +285,16 @@ apis:
     This endpoint can return a blank JSON.doc or AudioItemDocument depending on the `recommend=true|false` parameter. The `recommend=true` flag allows this endpoint to both receive ratings and send back recommendations in the same call.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////listening/v2/ratings
-  tags: News,Listening, Ratings
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2ratings-post-openapi.md
-- name: NPR Get a list of media for the logged-in user from NPR's recommendation engine
-  x-api-slug: npr
+- name: NPR One API Reference - Get a list of media for the logged-in user from NPR's
+    recommendation engine
+  x-api-slug: listeningv2recommendations-get
   description: |-
     This endpoint returns a list of audio recommendations. It is designed to be used for an initial list of recommendations, and then `GET /listening/v2/ratings?recommend=true` should be used for subsequent requests for recommendations.
 
@@ -267,40 +302,47 @@ apis:
     Be sure to copy and send back the entire ratings object (RatingData), as new fields may be added to it in the future.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////listening/v2/recommendations
-  tags: News,Listening, Recommendations
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2recommendations-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2recommendations-get-openapi.md
-- name: NPR Get a list of recent audio and aggregation items associated with search
-    terms
-  x-api-slug: npr
+- name: NPR One API Reference - Get a list of recent audio and aggregation items associated
+    with search terms
+  x-api-slug: listeningv2searchrecommendations-get
   description: In the schema shown below, SearchItemDocument is not an actual type
     of returned object; the object returned by a search will be either an AggregationAudioItemListDocument
     or an AudioItemDocument.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////listening/v2/search/recommendations
-  tags: News,Listening, Search, Recommendations
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2searchrecommendations-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/listeningv2searchrecommendations-get-openapi.md
-- name: NPR Send a donation email to the logged-in user (only on request)
-  x-api-slug: npr
+- name: NPR One API Reference - Send a donation email to the logged-in user (only
+    on request)
+  x-api-slug: localactivationv2donate-email-get
   description: This will send a station-specific donation email to the logged-in user.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////localactivation/v2/donate_email
-  tags: News,Localactivation, Donate, Email
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/localactivationv2donate-email-get-openapi.md
-- name: NPR Request DAAST sponsorship units
-  x-api-slug: npr
+- name: NPR One API Reference - Request DAAST sponsorship units
+  x-api-slug: sponsorshipv2ads-get
   description: |-
     **Not** for use by NPR One clients (for whom sponsorship is already integrated into the Listening Service), this endpoint is designed to be used by our other client applications to request sponsorship on behalf of a user. Sponsorship units are returned in the form of DAAST XML. It is worth noting that this endpoint attempts to always return XML, even in the case of exceptions.
 
@@ -309,28 +351,32 @@ apis:
     For development purposes, it's worth noting that there is currently no way to clear a user's cache without submitting some form of tracking.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////sponsorship/v2/ads
-  tags: News,Sponsorship, Advertising
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/sponsorshipv2ads-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/sponsorshipv2ads-get-openapi.md
-- name: NPR Record tracking data for DAAST sponsorship units
-  x-api-slug: npr
+- name: NPR One API Reference - Record tracking data for DAAST sponsorship units
+  x-api-slug: sponsorshipv2ads-post
   description: |-
     **Not** for use by NPR One clients (for whom sponsorship is already integrated into the Listening Service), this endpoint is designed to be used by our other client applications to submit tracking information for sponsorship units obtained from the `GET /sponsorship/v2/ads` endpoint.
 
     The tracking information should be submitted in the body of the request in the form of a JSON object following the Collection.Doc+JSON specification.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////sponsorship/v2/ads
-  tags: News,Sponsorship, Advertising
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/sponsorshipv2ads-post-openapi.md
-- name: NPR List stations close to you or filter by search criteria
-  x-api-slug: npr
+- name: NPR One API Reference - List stations close to you or filter by search criteria
+  x-api-slug: stationfinderv3stations-get
   description: |-
     This endpoint has two main use cases:
 
@@ -346,41 +392,38 @@ apis:
     If clients want to be able to offer multiple types of searches (e.g. 'Search for a station name, city or zipcode') using a *single* search input form, `q` should be used. But again, be aware that using `city` and `state` together will yield more accurate search results than `q={cityName}`.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////stationfinder/v3/stations
-  tags: News,Stationfinder, Stations
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/stationfinderv3stations-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/stationfinderv3stations-get-openapi.md
-- name: NPR Retrieve metadata for the station with the given numeric ID
-  x-api-slug: npr
+- name: NPR One API Reference - Retrieve metadata for the station with the given numeric
+    ID
+  x-api-slug: stationfinderv3stationsstationid-get
   description: |-
     This endpoint retrieves information about a given station, based on its numeric ID, which is consistent across all of NPR's APIs.
 
     A typical use case for this data is for clients who want to create a dropdown menu, modal/pop-up or dedicated page displaying more information about the station the client is localized to, including, for example, links to the station's homepage and donation (pledge) page.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
   humanURL: http://npr.org
-  baseURL: https://api.npr.org////stationfinder/v3/stations/{stationId}
-  tags: News,Stationfinder, Stations, Station
+  baseURL: https://api.npr.org//
+  tags: News, Radio, Getting Started Example, Federal Government, Stack Network, Stack,
+    Mobile, Media, API Provider, Broadcasts, Profiles, Publish, General Data, Relative
+    Data, Service API, Pedestal, Relative StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/stationfinderv3stationsstationid-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/stationfinderv3stationsstationid-get-openapi.md
-- name: NPR
-  x-api-slug: npr
-  description: NPR delivers breaking national and world news. Also top stories from
-    business, politics, health, science, technology, music, arts and culture. Subscribe
-    to podcasts and RSS feeds.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/141-npr.jpg
-  humanURL: http://npr.org
-  baseURL: https://api.npr.org//
-  tags: NPR
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-organizations/npr/master/_listings/npr/openapi.md
 x-common:
+- type: x-api-gallery
+  url: http://nfusion.solutions.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://npr.stack.network
 - type: x-base
   url: http://api.npr.org/
 - type: x-codecademy
